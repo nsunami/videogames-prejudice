@@ -5,7 +5,7 @@
 %
 \documentclass[
   english,
-  man,floatsintext]{apa6}
+  man, noextraspace,floatsintext]{apa6}
 \usepackage{lmodern}
 \usepackage{amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -39,8 +39,8 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={Can Interracial Parasocial Interactions in Video Games Reduce Prejudice and Promote Support for Anti-Racism?},
-  pdfauthor={Naoyuki Sunami1},
+  pdftitle={Can Interracial Parasocial Interactions in Video Games Reduce Prejudice and Promote Support for Anti-Racism? A Study Proposal},
+  pdfauthor={Naoyuki Sunami},
   pdflang={en-EN},
   pdfkeywords={video game, interracial contacts, parasocial relationships, prejudice},
   colorlinks=true,
@@ -50,46 +50,6 @@
   urlcolor=Blue,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -158,10 +118,7 @@
   {}{\typeout{Failed to patch title.}}
 \makeatother
 \shorttitle{VIDEO GAMES, INTERRACIAL INTERACTION, ANTI-RACISM}
-\keywords{video game, interracial contacts, parasocial relationships, prejudice\newline\indent Word count: 1,753}
-\usepackage{lineno}
-
-\linenumbers
+\keywords{video game, interracial contacts, parasocial relationships, prejudice\newline\indent Word count: 1019}
 \usepackage{csquotes}
 \ifxetex
   % Load polyglossia as late as possible: uses bidi with RTL langages (e.g. Hebrew, Arabic)
@@ -173,19 +130,33 @@
 \ifluatex
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
-\title{Can Interracial Parasocial Interactions in Video Games Reduce Prejudice and Promote Support for Anti-Racism?}
-\author{Naoyuki Sunami\textsuperscript{1}}
+\title{Can Interracial Parasocial Interactions in Video Games Reduce Prejudice and Promote Support for Anti-Racism? A Study Proposal}
+\author{Naoyuki Sunami\textsuperscript{}}
 \date{}
 
 
-\authornote{
-
-Correspondence concerning this article should be addressed to Naoyuki Sunami, . E-mail: \href{mailto:naoyuki.sunami@gmail.com}{\nolinkurl{naoyuki.sunami@gmail.com}}
-
-}
-
-\affiliation{\vspace{0.5cm}\textsuperscript{1} University of Delaware}
+\affiliation{\phantom{0}}
 
 \abstract{
 Video games can be a powerful art form where players safely learn about racial out-groups---their stories, beliefs, values, and social norms without concerns of appearing as a racist. In video games, players can interact with out-group characters and form parasocial connections, which then theoretically could reduce out-group bias and increase support for antiracist social movements. However, other research suggested that White people may experience negative emotions in interracial interactions, which could then leads to disengagement and less support for anti-racism. In the proposed study, I will examine whether White people who interact with Black characters report lower prejudice towards Black people and higher support for anti-racism movements (e.g., Black Lives Matter and Kick Out Zwarte Piet) compared with those who play a video game with White characters only. I will also measure participants' heart rate variability as a correlate for emotion regulation while playing the video game. I expect that participants with higher heart rate variability will report lower prejudice and higher support for anti-racism than those with lower heart rate variability.
@@ -196,77 +167,113 @@ Video games can be a powerful art form where players safely learn about racial o
 \begin{document}
 \maketitle
 
-\begin{verbatim}
-## Warning: package 'dplyr' was built under R version 4.0.5
-\end{verbatim}
+Video games are vastly popular---an estimated 40\% of the worldwide population (70\% in the Netherlands) played video games in 2020 (IGN, 2020; Statista, 2021). Video games can be a powerful art medium where players can interact with characters from racial outgroups, which then could reduce prejudice and increase support for anti-racist social movements (Breves, 2020). If so, video games can provide a scalable intervention strategy to facilitate diversity, inclusion, and social justice. In the current study, I examine whether White players who play a video game with Black characters would report lower prejudice and higher support for anti-racism, compared with those who play a video game with only White characters.
 
-\begin{verbatim}
-## Warning: package 'afex' was built under R version 4.0.5
-\end{verbatim}
+\hypertarget{interracial-parasocial-interactions-in-video-games}{%
+\subsection{Interracial Parasocial Interactions in Video Games}\label{interracial-parasocial-interactions-in-video-games}}
 
-\begin{verbatim}
-## Warning: package 'lme4' was built under R version 4.0.5
-\end{verbatim}
+In many video games with compelling characters, players experience parasocial interactions---one-sided relationships with a media figure (Burgess \& Jones, 2020; Horton \& Wohl, 1956; Tyack \& Wyeth, 2017). Players of \emph{Mass Effect 2} reported forming strong emotional bonds with characters in the game, even similar to romantic relationships (Burgess \& Jones, 2020). Parasocial interactions can be interracial. For example, a White player playing \emph{Mafia III} can parasocially interact with Black characters and learn about Black people's lives in the 1960s in the American south. These interracial contacts in video games are valuable since people often lack cross-race friends in real life (McDonald et al., 2013). Video games, especially those with racially diverse characters, could offer a scalable medium for people to connect with and learn about racial outgroups.
 
-\begin{verbatim}
-## Warning: package 'pwr' was built under R version 4.0.5
-\end{verbatim}
+\hypertarget{can-interracial-parasocial-interactions-in-video-games-reduce-prejudice-and-promote-anti-racism}{%
+\subsection{Can Interracial Parasocial Interactions in Video Games Reduce Prejudice and Promote Anti-Racism?}\label{can-interracial-parasocial-interactions-in-video-games-reduce-prejudice-and-promote-anti-racism}}
 
-\begin{verbatim}
-## Warning: package 'tidyverse' was built under R version 4.0.5
-\end{verbatim}
+Do interracial parasocial interactions can reduce prejudice and promote support for anti-racism? Studies on the parasocial contact hypothesis suggested that parasocial interactions with outgroups can reduce prejudice (Banas, Bessarabova, \& Massey, 2020; Schiappa, Gregg, \& Hewes, 2005, 2006). In one study, participants played a quest from \emph{Skyrim} and interacted with a Black character in a virtual reality environment. After playing the game, participants reported lower prejudice against Black people compared with those who did not interact with a Black character (Banas, Bessarabova, \& Massey, 2020). Lowered prejudice can facilitate more support for anti-racism: people with lower prejudice towards Black people endorsed the Black Lives Matter movement than those with higher prejudice (Ilchi \& Frank, 2021).~
 
-\begin{verbatim}
-## Warning: package 'tibble' was built under R version 4.0.5
-\end{verbatim}
+\hypertarget{a-potential-downside-of-interracial-interactions-aversive-racism}{%
+\subsection{A Potential Downside of Interracial Interactions: Aversive Racism}\label{a-potential-downside-of-interracial-interactions-aversive-racism}}
+
+According to the aversive racism theory, interactions with racial out-groups may not necessarily reduce prejudice or improve support for anti-racism. The aversive racism theory suggests that White people tend to experience negative affect in interracial interactions, which then leads to disengagement and less helping behavior for outgroups (Gaertner, 1973; Gaertner \& Dovidio, 2005; Goff, Steele, \& Davies, 2008). In the context of video games, I can expect that some White players might disengage from interracial parasocial interactions to avoid experiencing negative emotions, resulting in no changes in prejudice or support for anti-racism.~
+
+Some players may successfully regulate negative emotions and engage with interracial parasocial interactions. Indeed, Americans who effectively regulated their emotions reported lower prejudice towards Muslims following the Boston Marathon bombings than those who did not (Steele, Rovenpor, Lickel, \& Denson, 2019).~ Thus, White players who successfully regulate their emotions in interracial interactions may report lower prejudice and higher support for anti-racism than those who do not. To measure the degree of emotion regulation, I will use the heart rate variability---variation in heart rate over time. People with higher heart rate variability regulated their emotions more effectively than those with lower heart rate variability (Appelhans \& Luecken, 2006).
+
+\hypertarget{current-study}{%
+\subsection{Current Study}\label{current-study}}
+
+I designed the current study to examine whether White people would report lower prejudice and higher support for anti-racism after interacting with a Black character. I suggest the following hypotheses. First, I hypothesize that White players who interact with a Black character will report lower prejudice (Hypothesis 1a) and higher support for anti-racism (Hypothesis 2a) than those who interact only with a White character. Following the aversive racism hypothesis, I suggest an alternative hypothesis for the null results---the levels of interracial parasocial interaction do not affect prejudice (Hypothesis 1b) or the support for anti-racism (Hypothesis 2b). Finally, I hypothesize that among White players interacting with a Black character, those with higher heart rate variability would report less prejudice (Hypothesis 3) and more support for anti-racism (Hypothesis 4) compared with those with lower heart rate variability.~
 
 \hypertarget{method}{%
 \section{Method}\label{method}}
 
-\hypertarget{sample-size-and-participants}{%
-\subsection{Sample Size and Participants}\label{sample-size-and-participants}}
+\hypertarget{sample-size-rationale-and-participants}{%
+\subsection{Sample Size Rationale and Participants}\label{sample-size-rationale-and-participants}}
 
-I used d = 0.36 as the target effect size, derived from the median effect size from more than 18,000 effect size estimates in social psychology.
+Since no reliable effect size is available for the current study, I draw from the median effect size (d = 0.36) derived from more than 18,000 effect sizes in social psychology (Lovakov \& Agadullina, 2021). To achieve the 90\% power, and 5\% alpha, I will recruit 492 participants (164 for the 3-group design) to detect d = 0.36 between groups.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{target\_d }\OtherTok{\textless{}{-}} \FloatTok{0.36}
-\NormalTok{power\_results }\OtherTok{\textless{}{-}} \FunctionTok{pwr.t.test}\NormalTok{(}\AttributeTok{d =}\NormalTok{ target\_d, }\AttributeTok{power =} \FloatTok{0.90}\NormalTok{)}
-\NormalTok{total\_n\_3grp }\OtherTok{\textless{}{-}} \FunctionTok{ceiling}\NormalTok{(power\_results}\SpecialCharTok{$}\NormalTok{n) }\SpecialCharTok{*} \DecValTok{3}
-\end{Highlighting}
-\end{Shaded}
+\hypertarget{materials-procedure-and-measures}{%
+\subsection{Materials, Procedure, and Measures}\label{materials-procedure-and-measures}}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# \# Superpower approach 1}
-\CommentTok{\# \# Only the high rpresenation condition is different from zero. other conditions have null effects}
-\CommentTok{\# design\_result \textless{}{-} Superpower::ANOVA\_design("3b", n = 500, }
-\CommentTok{\#                          mu = c(target\_d, 0, 0), sd = 1,}
-\CommentTok{\#                          labelnames = c("Condition", "High", "Low", "Control"))}
-\CommentTok{\# plot\_power(design\_result, max\_n = 200)}
-\CommentTok{\# \# 148 per cell }
-\end{Highlighting}
-\end{Shaded}
+Participants will come to the lab, and then wear a heart rate monitor for recording heart rate variability. Participants complete the demographics questions and breathing task for the baseline heart rate variability (Time 1). Then, the participants will play a modded quest from Skyrim adopted from a previous study (Banas, Bessarabova, \& Massey, 2020). I will randomly assign participants to one of the three conditions. In the High Interracial Interaction Condition, participants will interact with Black characters to complete the quest. In the Low Interracial Interaction Condition, participants will interact with White characters. In the Control Condition, participants will play Tetris for the same amount of time. I will record heart rate variability during the gameplay (Time 2). After playing the video game, participants will complete a prejudice measure (Pettigrew \& Meertens, 1995, e.g.~{``Black people have jobs that the Dutch people should have''}), and an ad-hoc scale measuring support for antiracism (asking participants how much they support or oppose ``Black Lives Matter,'' ``Kick Out Zwarte Piet,'' and ``Anti-Racism''). Finally, participants will again complete a paced breathing task for the heart rate variability recording (Time 3).
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# Superpower approach}
-\CommentTok{\# }
-\CommentTok{\# design\_result \textless{}{-} Superpower::ANOVA\_design("3b", n = 500, }
-\CommentTok{\#                          mu = c(target\_d, {-}target\_d, 0), sd = 1,}
-\CommentTok{\#                          labelnames = c("Condition", "High", "Low", "Control"))}
-\CommentTok{\# plot\_power(design\_result, max\_n = 200)}
-\end{Highlighting}
-\end{Shaded}
+\hypertarget{analytic-strategy}{%
+\subsection{Analytic Strategy}\label{analytic-strategy}}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{r\_refs}\NormalTok{(}\AttributeTok{file =} \StringTok{"r{-}references.bib"}\NormalTok{)}
-\NormalTok{my\_citation }\OtherTok{\textless{}{-}} \FunctionTok{cite\_r}\NormalTok{(}\AttributeTok{file =} \StringTok{"r{-}references.bib"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+I will perform a One-Way ANOVA to examine if participants report different levels of prejudice (Hypotheses 1a and 1b) and support for anti-racism (Hypotheses 2a and 2b). To examine the moderating effect of heart rate variability across time, I will construct random-slope models predicting prejudice (Hypothesis 3) and anti-racism scores (Hypothesis 4) with the following predictors: Condition (categorical), Time, and Condition x Time interaction.
 
-```
+\newpage
+
+\hypertarget{references}{%
+\section{References}\label{references}}
+
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\hypertarget{ref-appelhansHeartRateVariability2006}{}%
+Appelhans, B. M., \& Luecken, L. J. (2006). Heart rate variability as an index of regulated emotional responding. \emph{Review of General Psychology}, \emph{10}(3), 229--240. \url{https://doi.org/10.1037/1089-2680.10.3.229}
+
+\leavevmode\hypertarget{ref-banasMetaAnalysisMediatedContact2020}{}%
+Banas, J. A., Bessarabova, E., \& Massey, Z. B. (2020). Meta-{Analysis} on {Mediated Contact} and {Prejudice}. \emph{Human Communication Research}, \emph{46}(2-3), 120--160. \url{https://doi.org/10.1093/hcr/hqaa004}
+
+\leavevmode\hypertarget{ref-brevesReducingOutgroupBias2020}{}%
+Breves, P. (2020). Reducing {Outgroup Bias} through {Intergroup Contact} with {Non}-{Playable Video Game Characters} in {VR}. \emph{PRESENCE: Virtual and Augmented Reality}, \emph{27}(3), 257--273. \url{https://doi.org/10.1162/pres_a_00330}
+
+\leavevmode\hypertarget{ref-burgessHarbourStrongFeelings2020}{}%
+Burgess, J., \& Jones, C. (2020). {"}{I Harbour Strong Feelings} for {Tali Despite Her Being} a {Fictional Character}{"}: {Investigating Videogame Players}' {Emotional Attachments} to {Non}-{Player Characters}. \emph{Game Studies}, \emph{20}(1). Retrieved from \url{http://gamestudies.org/2001/articles/burgessjones}
+
+\leavevmode\hypertarget{ref-gaertnerHelpingBehaviorRacial1973}{}%
+Gaertner, S. L. (1973). Helping behavior and racial discrimination among liberals and conservatives. \emph{Journal of Personality and Social Psychology}, \emph{25}(3), 335--341. \url{https://doi.org/10.1037/h0034221}
+
+\leavevmode\hypertarget{ref-gaertnerUnderstandingAddressingContemporary2005}{}%
+Gaertner, S. L., \& Dovidio, J. F. (2005). Understanding and {Addressing Contemporary Racism}: {From Aversive Racism} to the {Common Ingroup Identity Model}. \emph{Journal of Social Issues}, \emph{61}(3), 615--639. \url{https://doi.org/10.1111/j.1540-4560.2005.00424.x}
+
+\leavevmode\hypertarget{ref-goffSpaceUsStereotype2008}{}%
+Goff, P. A., Steele, C. M., \& Davies, P. G. (2008). The space between us: {Stereotype} threat and distance in interracial contexts. \emph{Journal of Personality and Social Psychology}, \emph{94}(1), 91--107. \url{https://doi.org/10.1037/0022-3514.94.1.91}
+
+\leavevmode\hypertarget{ref-hortonMassCommunicationParaSocial1956}{}%
+Horton, D., \& Wohl, R. R. (1956). Mass {Communication} and {Para}-{Social Interaction}. \emph{Psychiatry}, \emph{19}(3), 215--229. \url{https://doi.org/10.1080/00332747.1956.11023049}
+
+\leavevmode\hypertarget{ref-ignThreeBillionPeople2020}{}%
+IGN. (2020, August 14). Three {Billion People Worldwide Now Play Video Games}, {New Report Shows} - {IGN}. Retrieved June 21, 2021, from \url{https://www.ign.com/articles/three-billion-people-worldwide-now-play-video-games-new-report-shows}
+
+\leavevmode\hypertarget{ref-ilchiSupportingMessageNot2021}{}%
+Ilchi, O. S., \& Frank, J. (2021). Supporting the {Message}, {Not} the {Messenger}: {The Correlates} of {Attitudes} towards {Black Lives Matter}. \emph{American Journal of Criminal Justice}, \emph{46}(2), 377--398. \url{https://doi.org/10.1007/s12103-020-09561-1}
+
+\leavevmode\hypertarget{ref-lovakovEmpiricallyDerivedGuidelines2021}{}%
+Lovakov, A., \& Agadullina, E. R. (2021). Empirically derived guidelines for effect size interpretation in social psychology. \emph{European Journal of Social Psychology}, \emph{n/a}(n/a). \url{https://doi.org/10.1002/ejsp.2752}
+
+\leavevmode\hypertarget{ref-mcdonaldContributionsRacialSociobehavioral2013}{}%
+McDonald, K. L., Dashiell-Aje, E., Menzer, M. M., Rubin, K. H., Oh, W., \& Bowker, J. C. (2013). Contributions of {Racial} and {Sociobehavioral Homophily} to {Friendship Stability} and {Quality Among Same}-{Race} and {Cross}-{Race Friends}. \emph{The Journal of Early Adolescence}, \emph{33}(7), 897--919. \url{https://doi.org/10.1177/0272431612472259}
+
+\leavevmode\hypertarget{ref-pettigrewSubtleBlatantPrejudice1995}{}%
+Pettigrew, T. F., \& Meertens, R. W. (1995). Subtle and blatant prejudice in western {Europe}. \emph{European Journal of Social Psychology}, \emph{25}(1), 57--75. \url{https://doi.org/10.1002/ejsp.2420250106}
+
+\leavevmode\hypertarget{ref-schiappaParasocialContactHypothesis2005}{}%
+Schiappa, E., Gregg, P. B., \& Hewes, D. E. (2005). The {Parasocial Contact Hypothesis}. \emph{Communication Monographs}, \emph{72}(1), 92--115. \url{https://doi.org/10.1080/0363775052000342544}
+
+\leavevmode\hypertarget{ref-schiappaCanOneTV2006}{}%
+Schiappa, E., Gregg, P. B., \& Hewes, D. E. (2006). Can one {TV} show make a difference? {A Will} \& {Grace} and the parasocial contact hypothesis. \emph{Journal of Homosexuality}, \emph{51}(4), 15--37. \url{https://doi.org/10.1300/J082v51n04_02}
+
+\leavevmode\hypertarget{ref-statistaHoursSpentPlaying2021}{}%
+Statista. (2021, April). Hours spent on playing video games per week in the {Netherlands} 2020. Retrieved June 18, 2021, from \url{https://www-statista-com.udel.idm.oclc.org/forecasts/1226826/hours-spent-on-playing-video-games-per-week-in-the-netherlands}
+
+\leavevmode\hypertarget{ref-steeleEmotionRegulationPrejudice2019}{}%
+Steele, R. R., Rovenpor, D. R., Lickel, B., \& Denson, T. F. (2019). Emotion regulation and prejudice reduction following acute terrorist events: {The} impact of reflection before and after the {Boston Marathon} bombings. \emph{Group Processes \& Intergroup Relations}, \emph{22}(1), 43--56. \url{https://doi.org/10.1177/1368430217706182}
+
+\leavevmode\hypertarget{ref-tyackExploringRelatednessSingleplayer2017}{}%
+Tyack, A., \& Wyeth, P. (2017). Exploring relatedness in single-player video game play. In \emph{Proceedings of the 29th {Australian Conference} on {Computer}-{Human Interaction}} (pp. 422--427). {Brisbane, Queensland, Australia}: {Association for Computing Machinery}. \url{https://doi.org/10.1145/3152771.3156149}
+
+\end{CSLReferences}
 
 
 \end{document}
