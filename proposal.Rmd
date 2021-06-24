@@ -2,12 +2,6 @@
 title: "Can Interracial Parasocial Interactions in Video Games Reduce Prejudice and Promote Support for Anti-Racism? A Study Proposal"
 shorttitle        : "VIDEO GAMES, INTERRACIAL INTERACTION, ANTI-RACISM"
 author: 
-  - name          : "Naoyuki Sunami"
-    # affiliation   : "1"
-    corresponding : yes    # Define only one corresponding author
-    address       : ""
-    email         : "naoyuki.sunami@gmail.com"
-    # role:   # Contributorship roles (e.g., CRediT, https://casrai.org/credit/)
     #   - Conceptualization
     #   - Project Administration
     #   - Software
@@ -15,21 +9,22 @@ author:
     #   - Validation
     #   - Writing - Original Draft Preparation
     #   - Writing - Review & Editing
-
+  - name          : "Naoyuki Sunami"
+    # affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : ""
+    email         : "naoyuki.sunami@gmail.com"
+    # role:   # Contributorship roles (e.g., CRediT, https://casrai.org/credit/)
 # affiliation       :
 #   - id            : "1"
 #     institution   : "University of Delaware"
-
 # authornote: ""
   
 abstract: |
   Video games can be a powerful art form where players safely learn about racial out-groups—their stories, beliefs, values, and social norms without concerns of appearing as a racist. In video games, players can interact with out-group characters and form parasocial connections, which then theoretically could reduce out-group bias and increase support for antiracist social movements. However, other research suggested that White people may experience negative emotions in interracial interactions, which could then leads to disengagement and less support for anti-racism. In the proposed study, I will examine whether White people who interact with Black characters report lower prejudice towards Black people and higher support for anti-racism movements (e.g., Black Lives Matter and Kick Out Zwarte Piet) compared with those who play a video game with White characters only. I will also measure participants’ heart rate variability as a correlate for emotion regulation while playing the video game. I expect that participants with higher heart rate variability will report lower prejudice and higher support for anti-racism than those with lower heart rate variability. 
-
 keywords          : "video game, interracial contacts, parasocial relationships, prejudice"
-wordcount         : 1019
-
+wordcount         : 1009
 bibliography      : ["references.bib", "r-references.bib"]
-
 floatsintext      : yes
 figurelist        : no
 tablelist         : no
@@ -38,11 +33,15 @@ linenumbers       : no
 linkcolor         : "blue"
 mask              : no
 draft             : no
-
 # Class options:
   # https://mirror.las.iastate.edu/tex-archive/macros/latex/contrib/apa6/apa6.pdf
 classoption       : "man, noextraspace"
-output            : papaja::apa6_pdf # Use papaja::apa6_docx for Word documents
+output            : 
+  papaja::apa6_docx: default
+  papaja::apa6_pdf: default
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding,
+  output_dir = "output", output_format = "all") })
 ---
 
 ```{r include=FALSE}
@@ -55,13 +54,11 @@ knitr::opts_chunk$set(include = FALSE)
 
 ```
 
-Video games are vastly popular---an estimated 40% of the worldwide population (70% in the Netherlands) played video games in 2020 [@ignThreeBillionPeople2020; @statistaHoursSpentPlaying2021]. Video games can be a powerful art medium where players can interact with characters from racial outgroups, which then could reduce prejudice and increase support for anti-racist social movements [@brevesReducingOutgroupBias2020]. If so, video games can provide a scalable intervention strategy to facilitate diversity, inclusion, and social justice. In the current study, I examine whether White players who play a video game with Black characters would report lower prejudice and higher support for anti-racism, compared with those who play a video game with only White characters.
+Video games are vastly popular---an estimated 40% of the worldwide population (70% of the Dutch population) played video games in 2020 [@ignThreeBillionPeople2020; @statistaHoursSpentPlaying2021]. Video games can be a powerful art medium where players can interact with characters from racial outgroups, which could reduce prejudice and increase support for anti-racist social movements [@brevesReducingOutgroupBias2020]. If so, video games can provide a scalable intervention strategy to facilitate diversity, inclusion, and social justice. In the current study, I examine whether White players who play a video game with Black characters would report lower prejudice and higher support for anti-racism, compared with those who play a video game with only White characters.
 
-## Interracial Parasocial Interactions in Video Games
+## Interracial Parasocial Interactions in Video Games and Implications on Prejudice and Anti-Racism
 
-In many video games with compelling characters, players experience parasocial interactions---one-sided relationships with a media figure [@hortonMassCommunicationParaSocial1956; @tyackExploringRelatednessSingleplayer2017; @burgessHarbourStrongFeelings2020]. Players of *Mass Effect 2* reported forming strong emotional bonds with characters in the game, even similar to romantic relationships [@burgessHarbourStrongFeelings2020]. Parasocial interactions can be interracial. For example, a White player playing *Mafia III* can parasocially interact with Black characters and learn about Black people's lives in the 1960s in the American south. These interracial contacts in video games are valuable since people often lack cross-race friends in real life [@mcdonaldContributionsRacialSociobehavioral2013]. Video games, especially those with racially diverse characters, could offer a scalable medium for people to connect with and learn about racial outgroups.
-
-## Can Interracial Parasocial Interactions in Video Games Reduce Prejudice and Promote Anti-Racism?
+Many video games present compelling characters to whom players can form one-sided, emotional relationships--called *parasocial interactions* [@hortonMassCommunicationParaSocial1956; @tyackExploringRelatednessSingleplayer2017; @burgessHarbourStrongFeelings2020]. These parasocial  interactions can be interracial. For example, a White player playing *Mafia III* can parasocially interact with Black characters and learn about Black people's lives in the 1960s in the American south. These interracial contacts in video games are valuable since people often lack cross-race friends in real life [@mcdonaldContributionsRacialSociobehavioral2013]. 
 
 Do interracial parasocial interactions can reduce prejudice and promote support for anti-racism? Studies on the parasocial contact hypothesis suggested that parasocial interactions with outgroups can reduce prejudice [@banasMetaAnalysisMediatedContact2020; @schiappaCanOneTV2006; @schiappaParasocialContactHypothesis2005]. In one study, participants played a quest from *Skyrim* and interacted with a Black character in a virtual reality environment. After playing the game, participants reported lower prejudice against Black people compared with those who did not interact with a Black character [@banasMetaAnalysisMediatedContact2020]. Lowered prejudice can facilitate more support for anti-racism: people with lower prejudice towards Black people endorsed the Black Lives Matter movement than those with higher prejudice [@ilchiSupportingMessageNot2021]. 
 
@@ -85,11 +82,13 @@ total_n_3grp <- ceiling(power_results$n) * 3
 
 ## Sample Size Rationale and Participants
 
-Since no reliable effect size is available for the current study, I draw from the median effect size (d = `r target_d`) derived from more than 18,000 effect sizes in social psychology [@lovakovEmpiricallyDerivedGuidelines2021]. To achieve the 90% power, and 5% alpha, I will recruit `r total_n_3grp` participants (164 for the 3-group design) to detect d = 0.36 between groups.
+Since no reliable effect size is available for the current study, I draw from the median effect size (*d* = `r target_d`) derived from more than 18,000 effect sizes in social psychology [@lovakovEmpiricallyDerivedGuidelines2021]. To achieve the 90% power, and 5% alpha, I will recruit `r total_n_3grp` participants (164 for the 3-group design) to detect *d* = 0.36 between groups.
 
 ## Materials, Procedure, and Measures
 
-Participants will come to the lab, and then wear a heart rate monitor for recording heart rate variability. Participants complete the demographics questions and breathing task for the baseline heart rate variability (Time 1). Then, the participants will play a modded quest from Skyrim adopted from a previous study [@banasMetaAnalysisMediatedContact2020]. I will randomly assign participants to one of the three conditions. In the High Interracial Interaction Condition, participants will interact with Black characters to complete the quest. In the Low Interracial Interaction Condition, participants will interact with White characters. In the Control Condition, participants will play Tetris for the same amount of time. I will record heart rate variability during the gameplay (Time 2). After playing the video game, participants will complete a prejudice measure [@pettigrewSubtleBlatantPrejudice1995, e.g. "Black people have jobs that the Dutch people should have"], and an ad-hoc scale measuring support for antiracism (asking participants how much they support or oppose "Black Lives Matter", "Kick Out Zwarte Piet", and "Anti-Racism"). Finally, participants will again complete a paced breathing task for the heart rate variability recording (Time 3).
+Participants will come to the lab, and then wear a heart rate monitor for the heart rate variability recording. Participants will complete the demographics questions and a breathing task for the baseline heart rate variability (Time 1). Then, the participants will play a quest from Skyrim adopted from a previous study [@banasMetaAnalysisMediatedContact2020]. I will randomly assign participants to one of the three conditions. In the High Interracial Interaction Condition, participants will interact with Black characters to complete the quest. In the Low Interracial Interaction Condition, participants will interact with White characters. In the Control Condition, participants will play *Portal* for the same amount of time. I choose *Portal* for the control condition since the game shares the first-person perspecitve as *Skyrim* while not presenting parasocial interraction targets. During the gameplay, I will record participants' heart rate variability (Time 2).
+
+After playing the video game, participants will complete a prejudice measure [@pettigrewSubtleBlatantPrejudice1995, e.g. "Black people have jobs that the Dutch people should have"], and an ad-hoc scale measuring support for antiracism (asking participants how much they support or oppose "Black Lives Matter", "Kick Out Zwarte Piet", and "Anti-Racism"). Finally, participants will again complete a paced breathing task for the heart rate variability recording (Time 3).
 
 ## Analytic Strategy
 
