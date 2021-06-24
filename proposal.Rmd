@@ -1,0 +1,98 @@
+---
+title: "Can Interracial Parasocial Interactions in Video Games Reduce Prejudice and Promote Support for Anti-Racism?"
+shorttitle        : "VIDEO GAMES, INTERRACIAL INTERACTION, ANTI-RACISM"
+author: 
+  - name          : "Naoyuki Sunami"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : ""
+    email         : "naoyuki.sunami@gmail.com"
+    # role:   # Contributorship roles (e.g., CRediT, https://casrai.org/credit/)
+    #   - Conceptualization
+    #   - Project Administration
+    #   - Software
+    #   - Supervision
+    #   - Validation
+    #   - Writing - Original Draft Preparation
+    #   - Writing - Review & Editing
+
+affiliation       :
+  - id            : "1"
+    institution   : "University of Delaware"
+
+authornote:
+  
+abstract: |
+  Video games can be a powerful art form where players safely learn about racial out-groups—their stories, beliefs, values, and social norms without concerns of appearing as a racist. In video games, players can interact with out-group characters and form parasocial connections, which then theoretically could reduce out-group bias and increase support for antiracist social movements. However, other research suggested that White people may experience negative emotions in interracial interactions, which could then leads to disengagement and less support for anti-racism. In the proposed study, I will examine whether White people who interact with Black characters report lower prejudice towards Black people and higher support for anti-racism movements (e.g., Black Lives Matter and Kick Out Zwarte Piet) compared with those who play a video game with White characters only. I will also measure participants’ heart rate variability as a correlate for emotion regulation while playing the video game. I expect that participants with higher heart rate variability will report lower prejudice and higher support for anti-racism than those with lower heart rate variability. 
+
+keywords          : "video game, interracial contacts, parasocial relationships, prejudice"
+wordcount         : "1,753"
+
+bibliography      : ["references.bib", "r-references.bib"]
+
+floatsintext      : yes
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : no
+linkcolor         : "blue"
+mask              : no
+draft             : no
+
+classoption       : "man"
+output            : papaja::apa6_pdf # Use papaja::apa6_docx for Word documents
+---
+
+```{r, echo=FALSE}
+library("dplyr")
+library("afex")
+library("papaja")
+library(pwr)
+library(tidyverse)
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+
+# Method
+
+## Sample Size and Participants
+
+I used d = 0.36 as the target effect size, derived from the median effect size from more than 18,000 effect size estimates in social psychology.
+
+```{r}
+target_d <- 0.36
+power_results <- pwr.t.test(d = target_d, power = 0.90)
+total_n_3grp <- ceiling(power_results$n) * 3
+```
+
+
+
+```{r}
+# # Superpower approach 1
+# # Only the high rpresenation condition is different from zero. other conditions have null effects
+# design_result <- Superpower::ANOVA_design("3b", n = 500, 
+#                          mu = c(target_d, 0, 0), sd = 1,
+#                          labelnames = c("Condition", "High", "Low", "Control"))
+# plot_power(design_result, max_n = 200)
+# # 148 per cell 
+```
+
+```{r}
+# Superpower approach
+# 
+# design_result <- Superpower::ANOVA_design("3b", n = 500, 
+#                          mu = c(target_d, -target_d, 0), sd = 1,
+#                          labelnames = c("Condition", "High", "Low", "Control"))
+# plot_power(design_result, max_n = 200)
+```
+
+
+```{r}
+r_refs(file = "r-references.bib")
+my_citation <- cite_r(file = "r-references.bib")
+```
+
+```
+
+
