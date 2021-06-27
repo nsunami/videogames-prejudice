@@ -23,7 +23,7 @@ author:
 abstract: |
   Video games can be a powerful art form where players safely learn about racial out-groups—their stories, beliefs, values, and social norms without concerns of appearing as a racist. In video games, players can interact with out-group characters and form parasocial connections, which then theoretically could reduce out-group bias and increase support for antiracist social movements. However, other research suggested that White people may experience negative emotions in interracial interactions, which could then lead to disengagement and less support for anti-racism. In the proposed study, I will examine whether White people who interact with Black characters report lower prejudice towards Black people and higher support for anti-racism movements (e.g., Black Lives Matter and Kick Out Zwarte Piet) compared with those who play a video game with White characters only. I will also measure participants’ heart rate variability as a correlate for emotion regulation while playing the video game. I expect that participants with higher (vs. lower) heart rate variability while interacting with a Black character will report lower prejudice and higher support for anti-racism.
 keywords          : "video game, interracial contacts, parasocial relationships, prejudice"
-wordcount         : 1015
+wordcount         : 1014
 bibliography      : ["references.bib", "r-references.bib"]
 floatsintext      : yes
 figurelist        : no
@@ -93,7 +93,7 @@ After playing the video game, participants will complete a prejudice measure [@p
 
 ## Analytic Strategy
 
-I will perform a One-Way ANOVA to examine if participants report different levels of prejudice (Hypotheses 1a and 1b) and support for anti-racism (Hypotheses 2a and 2b) across the conditions. To examine the moderating effect of heart rate variability across time, I will construct random-slope models predicting prejudice (Hypothesis 3) and anti-racism scores (Hypothesis 4) with the following predictors: Condition (categorical), Time, and Condition x Time interaction.
+I will perform a One-Way ANOVA to examine if participants report different levels of prejudice (Hypotheses 1a and 1b) and support for anti-racism (Hypotheses 2a and 2b) across the conditions. To examine the moderating effect of heart rate variability across time, I will construct random-slope models predicting prejudice (Hypothesis 3) and anti-racism scores (Hypothesis 4) with the following predictors: Condition, Time, and Condition x Time interaction.
 
 ```{r}
 # r_refs(file = "r-references.bib")
