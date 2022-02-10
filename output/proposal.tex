@@ -1,19 +1,22 @@
 % Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
-\PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
   english,
   man, noextraspace,floatsintext]{apa6}
+\title{Can Interracial Parasocial Interactions in Video Games Reduce Prejudice and Promote Support for Anti-Racism? A Study Proposal}
+\author{Naoyuki Sunami\textsuperscript{}}
+\date{}
+
+\usepackage{amsmath,amssymb}
 \usepackage{lmodern}
-\usepackage{amsmath}
-\usepackage{ifxetex,ifluatex}
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+\usepackage{iftex}
+\ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
-  \usepackage{amssymb}
 \else % if luatex or xetex
   \usepackage{unicode-math}
   \defaultfontfeatures{Scale=MatchLowercase}
@@ -44,10 +47,10 @@
   pdflang={en-EN},
   pdfkeywords={video game, interracial contacts, parasocial relationships, prejudice},
   colorlinks=true,
-  linkcolor=blue,
-  filecolor=Maroon,
-  citecolor=Blue,
-  urlcolor=Blue,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
 \usepackage{graphicx}
@@ -76,6 +79,29 @@
   \let\oldsubparagraph\subparagraph
   \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 % Manuscript styling
 \usepackage{upgreek}
 \captionsetup{font=singlespacing,justification=justified}
@@ -120,46 +146,25 @@
 \shorttitle{VIDEO GAMES, INTERRACIAL INTERACTION, ANTI-RACISM}
 \keywords{video game, interracial contacts, parasocial relationships, prejudice\newline\indent Word count: 1014}
 \usepackage{csquotes}
-\ifxetex
+\ifXeTeX
   % Load polyglossia as late as possible: uses bidi with RTL langages (e.g. Hebrew, Arabic)
   \usepackage{polyglossia}
   \setmainlanguage[]{english}
 \else
-  \usepackage[shorthands=off,main=english]{babel}
+  \usepackage[main=english]{babel}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
 \fi
-\ifluatex
+\ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
-  % set entry spacing
-  \ifnum #2 > 0
-  \setlength{\parskip}{#2\baselineskip}
-  \fi
- }%
- {}
-\usepackage{calc}
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
-\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
-
-\title{Can Interracial Parasocial Interactions in Video Games Reduce Prejudice and Promote Support for Anti-Racism? A Study Proposal}
-\author{Naoyuki Sunami\textsuperscript{}}
-\date{}
 
 
 \affiliation{\phantom{0}}
 
 \abstract{
-Video games can be a powerful art medium where players safely learn about racial out-groups---their stories, beliefs, values, and social norms without concerns of appearing as a racist. In video games, players can interact with out-group characters and form parasocial connections, which then theoretically could reduce out-group bias and increase support for antiracist social movements. However, other research suggested that White people may experience negative emotions in interracial interactions, which could then lead to disengagement and less support for anti-racism. In the proposed study, I will examine whether White people who interact with Black characters report lower prejudice towards Black people and higher support for anti-racism movements (e.g., Black Lives Matter and Kick Out Zwarte Piet) compared with those who play a video game with White characters only. I will also measure participants' heart rate variability as a correlate for emotion regulation while playing the video game. I expect that participants with higher (vs.~lower) heart rate variability while interacting with a Black character will report lower prejudice and higher support for anti-racism.
+Video games can be a powerful art medium where players safely learn about racial out-groups---their stories, beliefs, values, and social norms without concerns about appearing as racist. In video games, players can interact with out-group characters and form parasocial connections, which then theoretically could reduce out-group bias and increase support for antiracist social movements. However, other research suggested that White people may experience negative emotions in interracial interactions, which could then lead to disengagement and less support for anti-racism. In the proposed study, I will examine whether White people who interact with Black characters report lower prejudice towards Black people and higher support for anti-racism movements (e.g., Black Lives Matter and Kick Out Zwarte Piet) compared with those who play a video game with White characters only. I will also measure participants' heart rate variability as a correlate for emotion regulation while playing the video game. I expect that participants with higher (vs.~lower) heart rate variability while interacting with a Black character will report lower prejudice and higher support for anti-racism.
 }
 
 
@@ -218,61 +223,61 @@ I will perform a One-Way ANOVA to examine if participants report different level
 
 \hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}
-\leavevmode\hypertarget{ref-appelhansHeartRateVariability2006}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-appelhansHeartRateVariability2006}{}}%
 Appelhans, B. M., \& Luecken, L. J. (2006). Heart rate variability as an index of regulated emotional responding. \emph{Review of General Psychology}, \emph{10}(3), 229--240. \url{https://doi.org/10.1037/1089-2680.10.3.229}
 
-\leavevmode\hypertarget{ref-banasMetaAnalysisMediatedContact2020}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-banasMetaAnalysisMediatedContact2020}{}}%
 Banas, J. A., Bessarabova, E., \& Massey, Z. B. (2020). Meta-{Analysis} on {Mediated Contact} and {Prejudice}. \emph{Human Communication Research}, \emph{46}(2-3), 120--160. \url{https://doi.org/10.1093/hcr/hqaa004}
 
-\leavevmode\hypertarget{ref-brevesReducingOutgroupBias2020}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-brevesReducingOutgroupBias2020}{}}%
 Breves, P. (2020). Reducing {Outgroup Bias} through {Intergroup Contact} with {Non}-{Playable Video Game Characters} in {VR}. \emph{PRESENCE: Virtual and Augmented Reality}, \emph{27}(3), 257--273. \url{https://doi.org/10.1162/pres_a_00330}
 
-\leavevmode\hypertarget{ref-burgessHarbourStrongFeelings2020}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-burgessHarbourStrongFeelings2020}{}}%
 Burgess, J., \& Jones, C. (2020). {"}{I Harbour Strong Feelings} for {Tali Despite Her Being} a {Fictional Character}{"}: {Investigating Videogame Players}' {Emotional Attachments} to {Non}-{Player Characters}. \emph{Game Studies}, \emph{20}(1). \url{http://gamestudies.org/2001/articles/burgessjones}
 
-\leavevmode\hypertarget{ref-gaertnerHelpingBehaviorRacial1973}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-gaertnerHelpingBehaviorRacial1973}{}}%
 Gaertner, S. L. (1973). Helping behavior and racial discrimination among liberals and conservatives. \emph{Journal of Personality and Social Psychology}, \emph{25}(3), 335--341. \url{https://doi.org/10.1037/h0034221}
 
-\leavevmode\hypertarget{ref-gaertnerUnderstandingAddressingContemporary2005}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-gaertnerUnderstandingAddressingContemporary2005}{}}%
 Gaertner, S. L., \& Dovidio, J. F. (2005). Understanding and {Addressing Contemporary Racism}: {From Aversive Racism} to the {Common Ingroup Identity Model}. \emph{Journal of Social Issues}, \emph{61}(3), 615--639. \url{https://doi.org/10.1111/j.1540-4560.2005.00424.x}
 
-\leavevmode\hypertarget{ref-goffSpaceUsStereotype2008}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-goffSpaceUsStereotype2008}{}}%
 Goff, P. A., Steele, C. M., \& Davies, P. G. (2008). The space between us: {Stereotype} threat and distance in interracial contexts. \emph{Journal of Personality and Social Psychology}, \emph{94}(1), 91--107. \url{https://doi.org/10.1037/0022-3514.94.1.91}
 
-\leavevmode\hypertarget{ref-hortonMassCommunicationParaSocial1956}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-hortonMassCommunicationParaSocial1956}{}}%
 Horton, D., \& Wohl, R. R. (1956). Mass {Communication} and {Para}-{Social Interaction}. \emph{Psychiatry}, \emph{19}(3), 215--229. \url{https://doi.org/10.1080/00332747.1956.11023049}
 
-\leavevmode\hypertarget{ref-ignThreeBillionPeople2020}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-ignThreeBillionPeople2020}{}}%
 IGN. (2020, August 14). \emph{Three {Billion People Worldwide Now Play Video Games}, {New Report Shows} - {IGN}}. \url{https://www.ign.com/articles/three-billion-people-worldwide-now-play-video-games-new-report-shows}
 
-\leavevmode\hypertarget{ref-ilchiSupportingMessageNot2021}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-ilchiSupportingMessageNot2021}{}}%
 Ilchi, O. S., \& Frank, J. (2021). Supporting the {Message}, {Not} the {Messenger}: {The Correlates} of {Attitudes} towards {Black Lives Matter}. \emph{American Journal of Criminal Justice}, \emph{46}(2), 377--398. \url{https://doi.org/10.1007/s12103-020-09561-1}
 
-\leavevmode\hypertarget{ref-lakensEquivalenceTestsPractical2017}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-lakensEquivalenceTestsPractical2017}{}}%
 Lakens, D. (2017). Equivalence {Tests}: {A Practical Primer} for t {Tests}, {Correlations}, and {Meta}-{Analyses}. \emph{Social Psychological and Personality Science}, \emph{8}(4), 355--362. \url{https://doi.org/10.1177/1948550617697177}
 
-\leavevmode\hypertarget{ref-lovakovEmpiricallyDerivedGuidelines2021}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-lovakovEmpiricallyDerivedGuidelines2021}{}}%
 Lovakov, A., \& Agadullina, E. R. (2021). Empirically derived guidelines for effect size interpretation in social psychology. \emph{European Journal of Social Psychology}, \emph{n/a}(n/a). \url{https://doi.org/10.1002/ejsp.2752}
 
-\leavevmode\hypertarget{ref-mcdonaldContributionsRacialSociobehavioral2013}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-mcdonaldContributionsRacialSociobehavioral2013}{}}%
 McDonald, K. L., Dashiell-Aje, E., Menzer, M. M., Rubin, K. H., Oh, W., \& Bowker, J. C. (2013). Contributions of {Racial} and {Sociobehavioral Homophily} to {Friendship Stability} and {Quality Among Same}-{Race} and {Cross}-{Race Friends}. \emph{The Journal of Early Adolescence}, \emph{33}(7), 897--919. \url{https://doi.org/10.1177/0272431612472259}
 
-\leavevmode\hypertarget{ref-pettigrewSubtleBlatantPrejudice1995}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-pettigrewSubtleBlatantPrejudice1995}{}}%
 Pettigrew, T. F., \& Meertens, R. W. (1995). Subtle and blatant prejudice in western {Europe}. \emph{European Journal of Social Psychology}, \emph{25}(1), 57--75. \url{https://doi.org/10.1002/ejsp.2420250106}
 
-\leavevmode\hypertarget{ref-schiappaParasocialContactHypothesis2005}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-schiappaParasocialContactHypothesis2005}{}}%
 Schiappa, E., Gregg, P. B., \& Hewes, D. E. (2005). The {Parasocial Contact Hypothesis}. \emph{Communication Monographs}, \emph{72}(1), 92--115. \url{https://doi.org/10.1080/0363775052000342544}
 
-\leavevmode\hypertarget{ref-schiappaCanOneTV2006}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-schiappaCanOneTV2006}{}}%
 Schiappa, E., Gregg, P. B., \& Hewes, D. E. (2006). Can one {TV} show make a difference? {A Will} \& {Grace} and the parasocial contact hypothesis. \emph{Journal of Homosexuality}, \emph{51}(4), 15--37. \url{https://doi.org/10.1300/J082v51n04_02}
 
-\leavevmode\hypertarget{ref-statistaHoursSpentPlaying2021}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-statistaHoursSpentPlaying2021}{}}%
 Statista. (2021, April). \emph{Hours spent on playing video games per week in the {Netherlands} 2020}. {Statista}. \url{https://www-statista-com.udel.idm.oclc.org/forecasts/1226826/hours-spent-on-playing-video-games-per-week-in-the-netherlands}
 
-\leavevmode\hypertarget{ref-steeleEmotionRegulationPrejudice2019}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-steeleEmotionRegulationPrejudice2019}{}}%
 Steele, R. R., Rovenpor, D. R., Lickel, B., \& Denson, T. F. (2019). Emotion regulation and prejudice reduction following acute terrorist events: {The} impact of reflection before and after the {Boston Marathon} bombings. \emph{Group Processes \& Intergroup Relations}, \emph{22}(1), 43--56. \url{https://doi.org/10.1177/1368430217706182}
 
-\leavevmode\hypertarget{ref-tyackExploringRelatednessSingleplayer2017}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-tyackExploringRelatednessSingleplayer2017}{}}%
 Tyack, A., \& Wyeth, P. (2017). Exploring relatedness in single-player video game play. \emph{Proceedings of the 29th {Australian Conference} on {Computer}-{Human Interaction}}, 422--427. \url{https://doi.org/10.1145/3152771.3156149}
 
 \end{CSLReferences}
