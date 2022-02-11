@@ -2,23 +2,13 @@
 title: "Can Interracial Parasocial Interactions in Video Games Reduce Prejudice and Promote Support for Anti-Racism? A Study Proposal"
 shorttitle        : "VIDEO GAMES, INTERRACIAL INTERACTION, ANTI-RACISM"
 author: 
-    #   - Conceptualization
-    #   - Project Administration
-    #   - Software
-    #   - Supervision
-    #   - Validation
-    #   - Writing - Original Draft Preparation
-    #   - Writing - Review & Editing
   - name          : "Naoyuki Sunami"
-    # affiliation   : "1"
-    corresponding : yes    # Define only one corresponding author
+    corresponding : yes    
     address       : ""
     email         : "naoyuki.sunami@gmail.com"
-    # role:   # Contributorship roles (e.g., CRediT, https://casrai.org/credit/)
-# affiliation       :
-#   - id            : "1"
-#     institution   : "University of Delaware"
-# authornote: ""
+
+authornote: |
+ The source code for this paper is available on GitHub at: https://github.com/nsunami/videogames-prejudice
   
 abstract: |
   Video games can be a powerful art medium where players safely learn about racial out-groups—their stories, beliefs, values, and social norms without concerns about appearing as racist. In video games, players can interact with out-group characters and form parasocial connections, which then theoretically could reduce out-group bias and increase support for antiracist social movements. However, other research suggested that White people may experience negative emotions in interracial interactions, which could then lead to disengagement and less support for anti-racism. In the proposed study, I will examine whether White people who interact with Black characters report lower prejudice towards Black people and higher support for anti-racism movements (e.g., Black Lives Matter and Kick Out Zwarte Piet) compared with those who play a video game with White characters only. I will also measure participants’ heart rate variability as a correlate for emotion regulation while playing the video game. I expect that participants with higher (vs. lower) heart rate variability while interacting with a Black character will report lower prejudice and higher support for anti-racism.
@@ -34,8 +24,6 @@ linkcolor         : "blue"
 mask              : no
 draft             : no
 csl: "apa.csl"
-# Class options:
-  # https://mirror.las.iastate.edu/tex-archive/macros/latex/contrib/apa6/apa6.pdf
 classoption       : "man, noextraspace"
 output            : 
   papaja::apa6_docx: default
@@ -94,11 +82,6 @@ After playing the video game, participants will complete a prejudice measure [@p
 ## Analytic Strategy
 
 I will perform a One-Way ANOVA to examine if participants report different levels of prejudice (Hypotheses 1a and 1b) and support for anti-racism (Hypotheses 2a and 2b) across the conditions. To examine the moderating effect of heart rate variability across time, I will construct random-slope models predicting prejudice (Hypothesis 3) and anti-racism scores (Hypothesis 4) with the following predictors: Condition, Time, and Condition x Time interaction.
-
-```{r}
-# r_refs(file = "r-references.bib")
-#my_citation <- cite_r(file = "r-references.bib")
-```
 
 \newpage
 
